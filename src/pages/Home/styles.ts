@@ -121,3 +121,15 @@ export const CurrentPage = styled.span`
   margin: 0 5px;
   color: white;
 `
+
+export const FlagButton = styled.button`
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  width: 30px;
+  padding: 0;
+  margin-right: 10px;
+`

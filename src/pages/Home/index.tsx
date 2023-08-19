@@ -15,10 +15,12 @@ import {
   ResultsArea,
   SearchArea,
   SearchButton,
+  FlagButton,
 } from './styles'
 import loadingGif from '../../assets/img/loading.gif'
 import PhotoCard from '../../components/PhotoCard'
 import { UserContext } from '../../context/UserContext'
+
 
 const Home = () => {
   const [loading, isLoading] = useState(false)

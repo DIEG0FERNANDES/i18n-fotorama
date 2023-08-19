@@ -7,6 +7,11 @@ import { FontStyles } from './assets/fonts/fonts'
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <BrowserRouter>
     <FontStyles />
+    <button>pt_BR</button>
+    <button>en</button>
+    <button>es</button>
+    <button>fr</button>
+    <button>it</button>
     <App />
   </BrowserRouter>
 )
