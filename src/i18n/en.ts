@@ -1,8 +1,8 @@
 export const en = {
     translation: {
         content: {
-            creationDataTime: 'Date of creation :',
-            createdDateTime: 'Created ',
+            creationDataTime: 'Creation date :',
+            createdDateTime: 'Created in ',
         },
     }
 }

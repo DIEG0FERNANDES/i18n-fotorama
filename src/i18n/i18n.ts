@@ -3,6 +3,9 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 import { ptBR } from './ptBR'
 import { en } from './en'
+import { es } from './es'
+import { fr } from './fr'
+import { it } from './it'
 import moment from 'moment'
 
 i18n
@@ -24,7 +27,7 @@ i18n
             },
         },
         resources: {
-            ptBR, en
+            ptBR, en, es, fr, it
         }
     })
 

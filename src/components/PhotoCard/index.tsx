@@ -29,7 +29,7 @@ const PhotoCard = ({ photo }: Props) => {
             </PhotoDescription>
           )}
           <PhotoCreationDate>
-            Criada em {photo.creationDate.toLocaleDateString()}
+            {t('content.createdDateTime')} {photo.creationDate.toLocaleDateString()}
           </PhotoCreationDate>
         </InfoPanel>
       </CardContainer>
