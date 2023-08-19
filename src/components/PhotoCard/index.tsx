@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next'
 import { Photo } from '../../models/Photo'
 import {
   CardContainer,
@@ -8,6 +7,7 @@ import {
   PhotoImage,
   PhotoLink,
 } from './styles'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   photo: Photo
@@ -29,7 +29,7 @@ const PhotoCard = ({ photo }: Props) => {
             </PhotoDescription>
           )}
           <PhotoCreationDate>
-            <span>{t("content.createdDateTime")}</span> {photo.creationDate.toLocaleDateString()}
+            Criada em {photo.creationDate.toLocaleDateString()}
           </PhotoCreationDate>
         </InfoPanel>
       </CardContainer>

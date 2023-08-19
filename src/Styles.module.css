@@ -1,0 +1,17 @@
+.flagButton {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  width: 32px;
+  padding: 0;
+  margin-right: 10px;
+}
+.flagButton:first-of-type {
+  margin-left: auto;
+}
+.flagButton img {
+  width: 100%;
+}

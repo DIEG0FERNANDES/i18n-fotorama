@@ -3,16 +3,25 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import { FontStyles } from './assets/fonts/fonts'
+import styles from './Styles.module.css'
 import ptBR from './assets/img/ptBR.png'
+import en from './assets/img/en.png'
+import es from './assets/img/es.png'
+import fr from './assets/img/fr.png'
+import it from './assets/img/it.png'
+
+import { useTranslation } from 'react-i18next'
+
+// const {i18n} = useTranslation()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <BrowserRouter>
     <FontStyles />
-    <button><img src={ptBR} alt="português" /></button>
-    <button>en</button>
-    <button>es</button>
-    <button>fr</button>
-    <button>it</button>
+    <button className={styles.flagButton} onClick={() => i18n.changeLanguage('ptBR')}><img src={ptBR} alt="Português" /></button>
+    <button className={styles.flagButton} onClick={() => i18n.changeLanguage('en')}><img src={en} alt="English" /></button>
+    <button className={styles.flagButton}><img src={es} alt="Espanhõl" /></button>
+    <button className={styles.flagButton}><img src={fr} alt="Français" /></button>
+    <button className={styles.flagButton}><img src={it} alt="Italiano" /></button>
     <App />
   </BrowserRouter>
 )

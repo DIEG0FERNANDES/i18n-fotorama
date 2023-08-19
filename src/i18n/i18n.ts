@@ -2,6 +2,7 @@ import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 import { ptBR } from './ptBR'
+import { en } from './en'
 import moment from 'moment'
 
 i18n
@@ -9,7 +10,7 @@ i18n
     .use(initReactI18next)
     .init({
         debug: true,
-        fallbackLng: 'pt',
+        fallbackLng: 'ptBR',
         interpolation: {
             escapeValue: false,
             format: (value, format, lng) => {
@@ -23,7 +24,7 @@ i18n
             },
         },
         resources: {
-            ptBR
+            ptBR, en
         }
     })
 
