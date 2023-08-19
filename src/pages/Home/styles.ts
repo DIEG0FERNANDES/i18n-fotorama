@@ -73,7 +73,7 @@ export const CriteriaOptionLabel = styled.span`
 `
 
 export const SearchButton = styled.button`
-  width: 100px;
+  min-width: 100px;
   background-color: #2d55ff;
   color: white;
   border-radius: 5px;

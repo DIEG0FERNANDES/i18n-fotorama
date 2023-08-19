@@ -42,7 +42,7 @@ const PhotoView = () => {
 
       <BackLinkPanel>
         <BackLink to='/'>
-          <BackButton>Voltar</BackButton>
+          <BackButton>{t("pages.voltar")}</BackButton>
         </BackLink>
       </BackLinkPanel>
     </Container>

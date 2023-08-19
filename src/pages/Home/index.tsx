@@ -19,6 +19,7 @@ import {
 import loadingGif from '../../assets/img/loading.gif'
 import PhotoCard from '../../components/PhotoCard'
 import { UserContext } from '../../context/UserContext'
+import { useTranslation } from 'react-i18next'
 
 const Home = () => {
   const [loading, isLoading] = useState(false)
@@ -59,11 +60,12 @@ const Home = () => {
     searchPhotos()
   }, [page])
 
+  const {t} = useTranslation()
   return (
     <Container>
       <SearchArea>
         <FilterInput
-          placeholder='Digite o termo da busca'
+          placeholder={t('pages.caixaTermo')}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -75,7 +77,7 @@ const Home = () => {
               setCriteria(e.target.checked ? 'relevant' : 'latest')
             }
           />
-          <CriteriaOptionLabel>Mais relevantes</CriteriaOptionLabel>
+          <CriteriaOptionLabel>{t('pages.rel')}</CriteriaOptionLabel>
 
           <CriteriaOptionButton
             checked={criteria == 'latest'}
@@ -83,10 +85,10 @@ const Home = () => {
               setCriteria(e.target.checked ? 'latest' : 'relevant')
             }
           />
-          <CriteriaOptionLabel>Mais recentes</CriteriaOptionLabel>
+          <CriteriaOptionLabel>{t('pages.ret')}</CriteriaOptionLabel>
         </CriteriaPanel>
 
-        <SearchButton onClick={() => searchPhotos()}>Buscar</SearchButton>
+        <SearchButton onClick={() => searchPhotos()}>{t('pages.busc')}</SearchButton>
       </SearchArea>
 
       <ResultsArea>
@@ -105,7 +107,7 @@ const Home = () => {
           )}
 
           <CurrentPage>
-            Página {page} de {totalPages}
+            {t('pages.page')} {page} {t('pages.of')} {totalPages}
           </CurrentPage>
 
           {page < totalPages && (
