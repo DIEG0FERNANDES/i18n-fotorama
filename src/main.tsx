@@ -16,9 +16,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <FontStyles />
     <button className={styles.flagButton} onClick={() => i18n.changeLanguage('ptBR')}><img src={ptBR} alt="Português" /></button>
     <button className={styles.flagButton} onClick={() => i18n.changeLanguage('en')}><img src={en} alt="English" /></button>
-    <button className={styles.flagButton} onClick={() => i18n.changeLanguage('es')}><img src={es}><img src={es} alt="Espanhõl" /></button>
-    <button className={styles.flagButton} onClick={() => i18n.changeLanguage('fr')}><img src={fr}><img src={fr} alt="Français" /></button>
-    <button className={styles.flagButton} onClick={() => i18n.changeLanguage('it')}><img src={it}><img src={it} alt="Italiano" /></button>
+    <button className={styles.flagButton} onClick={() => i18n.changeLanguage('es')}><img src={es} alt="Espanhõl" /></button>
+    <button className={styles.flagButton} onClick={() => i18n.changeLanguage('fr')}><img src={fr} alt="Français" /></button>
+    <button className={styles.flagButton} onClick={() => i18n.changeLanguage('it')}><img src={it} alt="Italiano" /></button>
     <App />
   </BrowserRouter>
 )

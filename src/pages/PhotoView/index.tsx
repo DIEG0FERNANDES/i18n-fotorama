@@ -11,6 +11,7 @@ import {
   PhotoDescription,
   PhotoPanel,
 } from './styles'
+import { useTranslation } from 'react-i18next'
 
 type Location = {
   state: {
@@ -21,6 +22,7 @@ type Location = {
 const PhotoView = () => {
   const location: Location = useLocation()
   const { photo } = location.state
+  const {t} = useTranslation()
 
   return (
     <Container>
@@ -33,7 +35,7 @@ const PhotoView = () => {
           )}
 
           <PhotoCreationDate>
-            Data de criação: {photo.creationDate.toLocaleDateString()}
+            {t("content.creationDataTime")} {photo.creationDate.toLocaleDateString()}
           </PhotoCreationDate>
         </InfoPanel>
       </PhotoPanel>
